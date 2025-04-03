@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> <!-- Declara el conjunto de caracteres del documento como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el sitio web como responsivo -->
+  <title>Tendencias | Today's Style</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Incluye la librería de íconos Font Awesome desde un CDN -->
+  <link rel="stylesheet" href="./css/styles1.css"> <!-- Enlace a la hoja de estilos local -->
+</head>
+
+<body>
+  <!-- Inicio del encabezado -->
+  <header class="header">
+    <img src="./images/Index/logo.PNG" alt="Logo de la empresa" class="logo"> <!-- Muestra el logo de la empresa -->
+    <nav>
+      <ul class="nav-list">
+        <li class="menu-categorias">
+          <a href="#">CATEGORÍAS</a>
+          <ul class="submenu">
+            <li><a href="Gorras.html">Gorras</a></li>
+            <li><a href="Pantalones.html">Pantalones</a></li>
+            <li><a href="Chaquetas.html">Chaquetas</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="Tendencias.html">TENDENCIAS</a></li>
+        <li><a href="Nosotros.html">NOSOTROS</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar" role="search">
+      <input id="search" type="text" placeholder="Buscar" aria-label="Buscar en el sitio">
+      <button aria-label="Buscar"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="user-actions">
+      <a href="Carrito.html"><button aria-label="Carrito de compras"><i class="fas fa-shopping-cart"></i></button></a>
+      <a href="favoritos.html"><button aria-label="Favoritos"><i class="fas fa-heart"></i></button></a>
+      <a href="Login.html"><button aria-label="Perfil de usuario"><i class="fas fa-user"></i></button></a>
+    </div>    
+  </header>
+  <!-- Fin del encabezado -->
+  
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>PRODUCTOS FAVORITOS POR TI</h1>
+        <p>Descubre mas de los productos más populares.</p>
+      </div>
+    </section>
+
+    <!-- Sección de productos -->
+    <section class="contenedor">
+      <div class="contenedor-items">
+        <div class="item">
+          <span class="titulo-item">Ropa 1</span>
+          <img src="./images/Gorras/G04.jpeg" alt="Gorra estilo moderno" class="img-item">
+          <span class="precio-item">$150.000</span>
+          <button class="boton-favorito" onclick="agregarAFavoritos('producto-1')">
+            <i class="fas fa-heart" id="producto-1"></i>
+          </button>
+          <button class="producto-agregar" id="chaqueta-01">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+          <span class="titulo-item">Ropa 2</span>
+          <img src="./images/Chaquetas/CH01.jpeg" alt="Chaqueta de estilo clásico" class="img-item">
+          <span class="precio-item">$250.000</span>
+          <button class="boton-favorito" onclick="agregarAFavoritos('producto-2')">
+            <i class="fas fa-heart" id="producto-2"></i>
+          </button>
+          <button class="producto-agregar" id="chaqueta-02">Agregar al Carrito</button>
+        </div>
+
+        <!-- Productos adicionales omitidos por brevedad en el react-->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Pie de página">
+    <div>
+      <strong>TODAY'STYLE</strong>
+      <p>Av. 123 ABC # 456, Medellín, Bogotá, Colombia</p>
+      <p>Email: <a href="mailto:info@todaysstyle.com">info@todaystyle.com</a></p>
+    </div>
+    <div>
+      <strong>Síguenos en</strong>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Acerca de</strong>
+      <ul>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Política de cookies</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Servicio al cliente</strong>
+      <ul>
+        <li><a href="#">Contacto y preguntas</a></li>
+        <li><a href="#">Métodos de pago</a></li>
+        <li><a href="#">Devoluciones</a></li>
+        <li><a href="#">Envíos</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  
+  <!-- Script para manejo de favoritos -->
+  <script>
+    function agregarAFavoritos(productoId) {
+      let iconoCorazon = document.getElementById(productoId);
+      if (iconoCorazon.classList.contains('far')) {
+        iconoCorazon.classList.remove('far');
+        iconoCorazon.classList.add('fas');
+        // Aquí puedes agregar lógica para guardar el producto en una lista de favoritos
+        alert('Producto agregado a favoritos');
+      } else {
+        iconoCorazon.classList.remove('fas');
+        iconoCorazon.classList.add('far');
+        // Aquí puedes agregar lógica para quitar el producto de la lista de favoritos
+        alert('Producto eliminado de favoritos');
+      }
+    }
+  </script>
+</body>
+</html>

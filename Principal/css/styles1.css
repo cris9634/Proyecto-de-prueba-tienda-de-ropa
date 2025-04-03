@@ -1,0 +1,443 @@
+/* Estilo general index.html */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para el header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  gap: 20px;
+}
+
+.header i {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombras ligeras */
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+/* Menú desplegable y categorías --- */
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-list li {
+  margin-right: 20px;
+  position: relative; /* Necesario para el menú desplegable */
+}
+
+/* Estilos para los enlaces en el menú */
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  padding: 12px 16px;
+}
+
+/* Menú desplegable */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+}
+
+.submenu li {
+  padding: 8px 16px;
+}
+
+/* Mostrar el submenú cuando el usuario pasa el mouse sobre "CATEGORÍAS" */
+.menu-categorias:hover .submenu {
+  display: block;
+}
+
+/* Hero Section(Publicidad de envio) */
+.hero {
+  background-color: #13361C;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero img {
+  width: 80px;
+  height: 100px;
+}
+
+/* barra de busqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 300px; /* Ajusta el ancho de búsqueda */
+}
+
+.search-bar button {
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.search-bar button i {
+  font-size: 13px; /* Reduce el tamaño del ícono */
+  padding: 10px;
+  border-radius: 9px;
+}
+
+.search-bar button:hover {
+  color: #e01010;
+}
+
+/* Contenedor productos*/
+.contenedor .contenedor-items{
+  margin-top: 50px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap:30px;
+  grid-row-gap: 30px;
+  /* width: 60%; */
+  width: 100%;
+  transition: .3s;
+} 
+.contenedor .contenedor-items .item{
+  max-width: 200px;
+  margin: auto;
+  border: 1px solid #686666;
+  border-radius: 10px;
+  padding: 15px;
+  transition: .3s;
+}
+.contenedor .contenedor-items .item .img-item{
+  width: 100%;
+  justify-items: center;
+  border-radius: 10px;
+  border: 1px solid #13361C;
+}
+.contenedor .contenedor-items .item:hover{
+  box-shadow: 0 0 10px #666;
+  scale: 1.05;
+}
+.contenedor .contenedor-items .item .titulo-item{
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px;
+}
+.contenedor .contenedor-items .item .precio-item{
+  margin: 5px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+.contenedor .contenedor-items .item .chaqueta01{
+  display: block;
+  margin: 10px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contenedor .contenedor-items .item .boton-favorito {
+  margin: 10px;
+  border: none;
+  color: #7a0909;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #13361C;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  flex-wrap: wrap; /*  */
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgb(21, 13, 139); /* color de los enlaces */
+}
+
+.footer a:hover {
+  color: #e0d8d8; /* Cambiar color al pasar el mouse */
+}
+
+/* Ajustes para los íconos redes sociales */
+.footer .fa {
+  color: #010a91; /* Color de los íconos */
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.footer .fa:hover {
+  color: #4fd128; /* Color de los íconos cuando el mouse pasa sobre ellos */
+}
+
+/* Navegación */
+.nav-main {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 30;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.user-actions i {
+  display: flex;
+  gap:10px;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+.user-actions button i {
+  color: #13361C;
+  display: flex;
+}
+.user-actions button i:hover {
+  color: #e01010;
+}
+.user-actions button  {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease; 
+}
+.nav-list li a:hover {
+  color: #e01010;
+}
+
+
+/* Nosotro.css Ajustes */
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero img {
+  width: 50px;
+  height: 60px;
+}
+
+.nosotros h1, .nosotros p {
+  color: white; /*  */
+  text-align: left;
+}
+
+/*  */
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.nosotros {
+  text-align: left; 
+  color: white;
+  margin-left: 20px;
+}
+
+.nosotros h1 {
+  font-size: 32px;
+}
+
+.nosotros p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* */
+.about-us,
+.what-we-are-looking-for,
+.our-goal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.about-us .about-text1, 
+.what-we-are-looking-for .about-text2, 
+.our-goal .about-text3 {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-us .about-image1, 
+.what-we-are-looking-for .about-image2, 
+.our-goal .about-image3 {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-us img, 
+.what-we-are-looking-for img, 
+.our-goal img {
+  max-width: 100%; /* Limita las imágenes para que no se salgan del contenedor */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* */
+h1 {
+  font-size: 32px;
+  color: #13361C;
+  margin-bottom: 20px;
+}
+
+/* */
+.what-we-are-looking-for {
+  flex-direction: row-reverse;
+}
+
+
+/* CSS CARRITO */ 
+
+.contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+}
+
+.carrito-vacio,
+.carrito-comprado {
+  color: var(--clr-main);
+}
+
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+}
+
+.carrito-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #734924;
+  color: var(--clr-white);
+  padding: .5rem;
+  padding-right: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem; 
+}
+
+.carrito-producto-imagen {
+  width: 4rem;
+  border-radius: .5rem;
+}
+
+.carrito-producto small {
+  font-size: .75rem;
+}
+
+.carrito-producto-eliminar {
+  border: 0;
+  background-color: transparent;
+  color: #0D0D0D;
+  cursor: pointer;
+}
+
+.carrito-acciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito-acciones-vaciar {
+  border: 0; 
+  background-color: #cec9c9;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--clr-main);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.carrito-acciones-derecha {
+  display: flex;
+}
+
+.carrito-acciones-total {
+  display: flex;
+  align-items: center;
+  background-color: #cec9c9;
+  padding: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  color: var(--clr-main);
+  text-transform: uppercase;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  gap: 1rem;
+}
+
+.carrito-acciones-comprar {
+  border: 0; 
+  background-color: var(--clr-main);
+  padding: 1rem;
+  border-radius: 0 1rem 1rem 0;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.disabled {
+  display: none;
+}

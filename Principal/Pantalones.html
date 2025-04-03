@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Style</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles1.css">
+</head>
+
+<body>
+  <header class="header">
+    <img src="./images/Index/logo.PNG" alt="Logo de la empresa" class="logo">
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">INICIO</a></li>
+        <li class="menu-categorias">
+          <a href="#">CATEGORÍAS</a>
+          <ul class="submenu">
+            <li><a href="Gorras.html">Gorras</a></li>
+            <li><a href="Pantalones.html">Pantalones</a></li>
+            <li><a href="Chaquetas.html">Chaquetas</a></li>
+          </ul>
+        </li>
+        <li><a href="Tendencias.html">TENDENCIAS</a></li>
+        <li><a href="Nosotros.html">NOSOTROS</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input id="search" type="text" placeholder="Buscar">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="user-actions">
+      <a href="Carrito.html"><button><i class="fas fa-shopping-cart"></i></button></a>
+      <a href="favoritos.html"><button><i class="fas fa-heart"></i></button></a>
+      <a href="Login.html"><button><i class="fas fa-user"></i></button></a>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="hero">
+    <!-- <img src="./images/Index/otro.jpeg" alt="Imagen principal" class="hero-image"> -->
+      <div class="hero-content">
+        <h1>TODAY'S STYLE</h1>
+        <p>Bienvenidos a la sesión de Pantalones</p>
+        <p>Recibe tu primer pedido gratis en  Bogotá</p>
+      </div>
+    </section>
+
+    <!-- Sección de productos -->
+    <section class="contenedor">
+      <div class="contenedor-items">
+        <!-- Primer producto -->
+        <div class="item">
+          <span class="titulo-item">Pantalon cargo marly</span>
+          <img src="./images/Pantalones/Caballero/P02.jpeg" alt="Gorra estilo moderno" class="img-item">
+          <span class="precio-item">$190.000</span>
+          <button class="boton-favorito" onclick="agregarAFavoritos('producto-1')">
+            <i class="far fa-heart" id="producto-1"></i>
+          </button>
+          <button class="producto-agregar" id="chaqueta-01">Agregar al Carrito</button>
+        </div>
+
+        <!-- Segundo producto -->
+        <div class="item">
+          <span class="titulo-item">Clasico Azul</span>
+          <img src="./images/Pantalones/Caballero/je1h.jpg" alt="Chaqueta de estilo clásico" class="img-item">
+          <span class="precio-item">$130.000</span>
+          <button class="boton-favorito" onclick="agregarAFavoritos('producto-2')">
+            <i class="far fa-heart" id="producto-2"></i>
+          </button>
+          <button class="producto-agregar" id="chaqueta-02">Agregar al Carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <!-- Footer -->
+<footer class="footer" aria-label="Pie de página">
+    <div>
+        <strong>TODAY'STYLE</strong>
+        <p>Av. 123 ABC # 456, Medellín, Bogotá, Colombia</p>
+        <p>Email: <a href="mailto:info@todaysstyle.com">info@todaystyle.com</a></p>
+    </div>
+    <div>
+        <strong>Síguenos en</strong>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </div>
+    <div>
+        <strong>Acerca de</strong>
+        <ul>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Política de cookies</a></li>
+        </ul>
+    </div>
+    <div>
+        <strong>Servicio al cliente</strong>
+        <ul>
+            <li><a href="#">Contacto y preguntas</a></li>
+            <li><a href="#">Métodos de pago</a></li>
+            <li><a href="#">Devoluciones</a></li>
+            <li><a href="#">Envíos</a></li>
+        </ul>
+    </div>
+</footer>
+
+  <!-- Vincula el archivo JS -->
+<!-- <script src="./js/favoritos.js"></script> -->
+</body>
+</html>

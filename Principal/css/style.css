@@ -1,0 +1,107 @@
+/* Estilo para el contenedor del formulario */
+.form-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 50px;
+    padding: 20px;
+    width: 80%; 
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto; 
+    height: auto;
+}
+  /* Estilo para la imagen a la izquierda */
+.form-container .image-container {
+    flex: 1;
+    margin-right: 20px;
+}
+.form-container .form-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+}
+  /* Estilo para el formulario a la derecha */
+.form-container .form-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-width: 100%; /* Asegura que no exceda el ancho de la pantalla */
+    height: auto;
+}
+  /* Estilo de los campos de formulario */
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="password"],
+.form-section input[type="tel"],
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.form-section .terms {
+    display: flex;
+    align-items: center;
+}
+.form-section .terms input {
+    margin-right: 10px;
+}
+.form-section input[type="submit"] {
+    background-color: #13361C;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+.form-section input[type="submit"]:hover {
+    background-color: #9ea79e;
+}
+.form-section label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.form-section h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #13361C;
+}
+
+
+/* Contenedor de login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Caja de login */
+.login-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 40px;
+}

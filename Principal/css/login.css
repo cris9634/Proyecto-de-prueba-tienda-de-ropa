@@ -1,0 +1,133 @@
+/* Contenedor de login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Caja de login */
+.login-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 40px;
+}
+
+/* Estilo para el contenedor del formulario */
+.form-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%; 
+    max-width: 500px; /* Tamaño máximo */
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+/* Título principal */
+.titulo-principal {
+    font-size: 28px;
+    font-weight: bold;
+    color: #13361C;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los campos de formulario */
+.input-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #13361C;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Botón de submit */
+.submit-button {
+    background-color: #13361C;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #e7e7ee;
+}
+
+/* Enlace para el registro */
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #2913eb;
+}
+
+p a {
+    color: #13361C;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para la imagen a la derecha */
+.image-container {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.form-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #13361C;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #9ea79e;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
