@@ -1,7 +1,7 @@
 import React from 'react';
 import axiosInstance from '../api/axioInstance';
 
-/* Se crea esta const para que le de funcion al boton */ 
+/* Se crea esta const para que le de funcion al boton al momento de ejecutar */ 
 const cargarButton = async (e) => { 
     e.preventDefault();
     const Correo_Electronico = document.querySelector("#email").value;/* Aqui va al html y busca la etiqueta llamada email */
