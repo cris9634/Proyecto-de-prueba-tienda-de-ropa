@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-03-2025 a las 23:01:04
+-- Tiempo de generación: 05-04-2025 a las 05:56:35
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `todaystyle`
+-- Base de datos: `tienda_ropa`
 --
 
 -- --------------------------------------------------------
@@ -79,6 +79,27 @@ CREATE TABLE `inventario` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `login_usuarios`
+--
+
+CREATE TABLE `login_usuarios` (
+  `idLogin` int(11) NOT NULL,
+  `Correo_Electronico` varchar(250) NOT NULL,
+  `Contrasena` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `login_usuarios`
+--
+
+INSERT INTO `login_usuarios` (`idLogin`, `Correo_Electronico`, `Contrasena`) VALUES
+(1, 'sergio.p@email.com', '123hfhfh'),
+(2, 'sergio_sbarrera@soy.sena.edu.co', 'asdfg123'),
+(3, 'fffsdf@gmail.com', 'fsdfd');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `pagos`
 --
 
@@ -113,14 +134,14 @@ CREATE TABLE `productos` (
   `idProducto` int(11) NOT NULL,
   `nombreProducto` varchar(45) NOT NULL,
   `precioProducto` varchar(45) NOT NULL,
-  `descripcionProducto` varchar(100) NOT NULL
+  `descripciónProducto` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`idProducto`, `nombreProducto`, `precioProducto`, `descripcionProducto`) VALUES
+INSERT INTO `productos` (`idProducto`, `nombreProducto`, `precioProducto`, `descripciónProducto`) VALUES
 (2001, 'Chaqueta Casual Negra', '120000', 'Chaqueta ligera, ideal para días frescos'),
 (2002, 'Jean Dama Azul Claro', '60000', 'Jean ajustado de corte alto para dama'),
 (2003, 'Gorra Deportiva Roja', '35000', 'Gorra cómoda y ajustable para actividades'),
@@ -235,7 +256,7 @@ CREATE TABLE `usuario` (
   `apellidosUsuario` varchar(80) NOT NULL,
   `correoUsuario` varchar(100) NOT NULL,
   `telefonoUsuario` varchar(15) NOT NULL,
-  `direccionUsuario` varchar(80) NOT NULL,
+  `direcciónUsuario` varchar(80) NOT NULL,
   `passwordUsuario` varchar(200) NOT NULL,
   `rolUsuario` varchar(45) NOT NULL,
   `loginUsuario` datetime NOT NULL
@@ -245,7 +266,7 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`idUsuario`, `nombresUsuario`, `apellidosUsuario`, `correoUsuario`, `telefonoUsuario`, `direccionUsuario`, `passwordUsuario`, `rolUsuario`, `loginUsuario`) VALUES
+INSERT INTO `usuario` (`idUsuario`, `nombresUsuario`, `apellidosUsuario`, `correoUsuario`, `telefonoUsuario`, `direcciónUsuario`, `passwordUsuario`, `rolUsuario`, `loginUsuario`) VALUES
 (10000, 'Cristian Andres', 'Alarcon Sogamoso', 'cristian_aalarcon@soy.sena.edu.co', '3102782961', 'Calle 51 # 12 - 49', 'PruebadeCarga2025', 'Administrador', '2025-03-05 22:39:12'),
 (10001, 'Sergio Stiven', 'Barrera', 'sergio_sbarrera@soy.sena.edu.co', '3132770815', 'Calle 51 # 12 - 49', 'PruebadeCarga2025', 'Administrador', '2025-03-05 22:47:08'),
 (10002, 'Carlos Daniel', 'Martinez', 'cdmartinez5608@soy.sena.edu.co', '3107223298', 'Calle 51 # 12 - 49', 'pruebadeCarga2025', 'Administrador', '2025-03-08 10:04:08'),
@@ -323,6 +344,12 @@ ALTER TABLE `inventario`
   ADD PRIMARY KEY (`idInventario`);
 
 --
+-- Indices de la tabla `login_usuarios`
+--
+ALTER TABLE `login_usuarios`
+  ADD PRIMARY KEY (`idLogin`);
+
+--
 -- Indices de la tabla `pagos`
 --
 ALTER TABLE `pagos`
@@ -347,8 +374,8 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `resenia`
   ADD PRIMARY KEY (`idResenia`),
-  ADD KEY `fk_idUsuario_Resenia` (`idUsuario`) USING BTREE,
-  ADD KEY `fk_idProducto_Resenia` (`idProducto`) USING BTREE;
+  ADD KEY `fk_idUsuario_Reseña` (`idUsuario`),
+  ADD KEY `fk_idProducto_Reseña` (`idProducto`);
 
 --
 -- Indices de la tabla `usuario`
@@ -365,6 +392,12 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `historial_usuario`
   MODIFY `idHistorial` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `login_usuarios`
+--
+ALTER TABLE `login_usuarios`
+  MODIFY `idLogin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido`
@@ -431,3 +464,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
